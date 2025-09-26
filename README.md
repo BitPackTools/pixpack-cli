@@ -1,6 +1,11 @@
 # pixpack-cli
 A lightweight steganography tool for Windows that hides encrypted files inside PNG images using batch scripts.
 
+<div align="center">
+  <img src="https://github.com/BitPackTools/pixpack-cli/blob/main/logo/logo.png" alt="PixPack Logo" width="300">
+</div>
+
+
 ## Features
 
 - **Pack**: Compress and encrypt files/folders with 7z, then embed them into PNG images
@@ -18,12 +23,12 @@ A lightweight steganography tool for Windows that hides encrypted files inside P
 
 **Packing Example:**
 ```cmd
-pixpack_pack.bat "photo.png" "secret_files" "packed_photo.png" "mypassword123"
+pixpack_pack.bat "photo.png" "secret_file" "packed_photo.png" "mypassword123"
 ```
 
 **Unpacking Example:**
 ```cmd
-pixpack_unpack.bat "packed_photo.png" "extracted_files" "mypassword123"
+pixpack_unpack.bat "packed_photo.png" "C:\path\to\extracted_files" "mypassword123"
 ```
 
 ## How it works
