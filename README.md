@@ -19,6 +19,40 @@ A lightweight steganography tool for Windows that hides encrypted files inside P
 - Windows
 - **7zr.exe** (7-Zip standalone executable) - must be placed in the same directory as the scripts
 
+# PixPack
+
+## New GUI Versions (2025-09-29)
+
+Two new dialog-based batch files have been added:
+
+- `pixpack_pack_dialog.bat` — Pack files with a simple selection dialog.  
+- `pixpack_unpack_dialog.bat` — Unpack files with a simple selection dialog.  
+
+These scripts provide a more user-friendly interface compared to the command-line versions.
+
+## Installer (`install.bat`)
+
+The `install.bat` script automates the registration of PixPack in the Windows context menu for `.png` files.
+
+### What it does
+
+1. Detects the full paths of the batch files in the same folder as the installer.  
+2. Generates a temporary `.reg` file containing the necessary Windows Registry entries.  
+3. Imports the `.reg` file into the system registry (administrator privileges required).
+
+### Result
+
+After running `install.bat`:
+
+- Right-clicking a `.png` file will show two new context menu options:  
+  - **Pack with PixPack** — runs `pixpack_pack_dialog.bat`.  
+  - **Unpack with PixPack** — runs `pixpack_unpack_dialog.bat`.
+
+This allows quick access to PixPack functionality directly from Windows Explorer without opening a command prompt.
+
+**Note:** You must run `install.bat` as Administrator for the registry changes to take effect.
+
+
 ## Usage
 
 **Packing Example:**
